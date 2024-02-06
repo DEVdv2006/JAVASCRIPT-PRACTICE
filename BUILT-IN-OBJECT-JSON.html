@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSON </title>
+    </head>
+    <body>
+       <script>
+        const products={
+            name:'socks' ,
+            price:1090 ,
+            'delivery-time':'1-Day',
+            rating : {   //Nested Object
+                stars:4.5,
+                count:87
+            },
+            fun :function objfunction()
+            { console.log('Function inside object');}
+        };
+
+       console.log( JSON.stringify(products)); //stringify() is function of JSON 
+       console.log( typeof JSON.stringify(products)); //which convert js value in                                     //which converts a JS value to jason string
+                                                     //jason string
+          const jsonSTRING=JSON.stringify(products);
+          console.log(JSON.parse(jsonSTRING));
+       </script>                          
+    </body>
+</html>

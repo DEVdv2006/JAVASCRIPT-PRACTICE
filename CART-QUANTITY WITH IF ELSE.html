@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CART-QUANTITY WITH IFELSE</title>
+    </head>
+    <body>
+        <h2>Cart Quantity</h2>
+        <button onclick="console.log('Cart Quantity:',count)"  class="Show">Show Quantity</button>
+
+
+        <button onclick=" if(count>=10){alert('Cart is Full')} else{console.log('Cart Quantiy:',count=count+1)}" class="add">Add To Cart</button>
+        <button onclick=" if(count>=10){alert('Cart is Full')} else{ console.log('Cart Quantiy:',count=count+2)}" class="add2">+2</button>
+        <button onclick=" if(count>=10){alert('Cart is Full')} else{ console.log('Cart Quantiy:',count=count+3)}" class="add3">+3</button>
+        <button onclick="console.log('Cart Quantiy Rest:',count=0)" class="reset">Reset Cart</button>
+        <button onclick=" if(count>=10){alert('Cart is Full')} else{ console.log(count=count+4)}">+4</button>
+        <button onclick="  if(count>=10){alert('Cart is Full')} else{ console.log(count=count+5)}">+5</button>
+        <button onclick=" if(count<=0){alert('Cart Is Already Empty')} else{console.log(count=count-2)}">-2</button>
+        <button onclick="  if(count<=0){alert('Cart Is Already Empty')}  else {console.log(count=count-3)}">-3</button>
+        <button onclick="  if(count<=0){alert('Cart Is Already Empty')}   else{ console.log(--count)}">Remove From Cart</button>
+       <script>
+
+         let count=0;
+         </script>
+        
+       
+    </body>
+</html>

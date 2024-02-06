@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>DOM PROJECTS</title>
+    </head>
+    <body>
+        <p>Youtube Subscribe Button</p>
+        <button onclick=" subscribe();  " 
+         class="sub-button">Subscribe</button>
+       <script>
+//make sure that there is no spaces btw <button>Subscribe</button> otherwise innerHtml also consider spaces as part of button
+//to solve this problem we can use ButtonElement.innerTEXT as it only count text & no spaces
+
+function subscribe()
+{
+    const ButtonElement=document.querySelector('.sub-button');
+              if(ButtonElement.innerHTML==='Subscribe')
+              { ButtonElement.innerHTML='Subscribed';}
+             else
+             {ButtonElement.innerHTML='Subscribe';}
+}
+
+
+       </script>
+    </body>
+</html>

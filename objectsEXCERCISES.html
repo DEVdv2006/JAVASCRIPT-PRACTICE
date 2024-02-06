@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>OBJ EXCERCISE</title>
+    </head>
+    <body>
+       <script>
+        const product={
+            name:'basketball',
+            price:2095,
+            'delivery-time' : '3 days'
+        };
+        product.price=(product.price+500);
+       // console.log(product);
+        const product1={
+            name:'basketball',
+            price:2595,
+            'delivery-time' : '3 days'
+        };
+        function compareprice(product,product2)
+        {
+            if(product.price<product1.price)
+            {  return product;}
+            else
+            return product1;
+        }
+
+        function isSameProduct(product,product1)
+        {
+            if((product.price===product1.price)&&(product.name===product1.name)&&(product['delivery-time']===product1['delivery-time']))
+            return true;
+            else
+            return false;
+        }
+        console.log(compareprice(product,product1));
+        console.log(isSameProduct(product,product1));
+       console.log( 'GOOD-MORNING'.toLowerCase());
+       console.log('GOOD-MORNING'.repeat(4));
+       </script>
+    </body>
+</html>

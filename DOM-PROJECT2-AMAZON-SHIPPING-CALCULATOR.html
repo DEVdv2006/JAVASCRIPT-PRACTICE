@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>AMAZON SHIPPING CALCULATOR</title>
+    </head>
+    <body>
+       <p>Amazon Shipping Calculator</p>
+       <input placeholder="cost of order" class="input" onkeydown="console.log(event.key)
+       if(event.key==='Enter')
+       {costCalc();}
+       
+       ">
+       <button onclick="costCalc();" >Calculate</button>
+
+    <p class="js-total-cost"></p>
+
+
+
+
+    <script>
+       window.document;  //window is another built in object of JS that represent Browser
+       window.console.log('hii'); //this will work same as console.log('hii'),but we don't write window object because 
+       window.alert;//JS will automatically add it
+       string(25);  //if a string only contains number and we perform -*/ on it js will convert it into number
+       console.log('25'-5); 
+        
+        function costCalc()
+        {
+          const inputELEMENT  =   document.querySelector('.input');
+          //console.log(inputELEMENT.value);
+          let cost = Number(inputELEMENT.value); //since Values Of Dom are string
+          let final;
+          if(cost<40)
+          {
+            cost=(cost+10);
+          }
+          document.querySelector('.js-total-cost') .innerHTML=`$${cost}`;
+        }
+    </script>
+    </body>
+</html>

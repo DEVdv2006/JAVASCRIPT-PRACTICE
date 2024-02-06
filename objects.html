@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objects</title>
+    </head>
+    <body>
+       <script>
+        const products={
+            name:'socks' ,
+            price:1090 ,
+            'delivery-time':'1-Day',
+            rating : {   //Nested Object
+                stars:4.5,
+                count:87
+            },
+            fun :function objfunction()
+            { console.log('Function inside object');}
+        };
+        console.log(products);
+        console.log(products.name);  //will print socks
+        console.log(products.price); //will print 1090
+        products.name='Cotton T-Shirts';  //changes value of name from socks to cotton t shirts
+        console.log(products);  //will print updated value          
+        products.newProperty=true; //adding new property to object
+        console.log(products); //updated object with newProperty
+        delete products.newProperty;//will delete new property
+        console.log(products);
+console.log(products['name']);//another way to access value of properties
+console.log(products['price']);//Brackets notation
+console.log(products['delivery-time']);
+console.log(products.rating.count); //will print count
+products.fun(); //will call objfunction
+
+//MORE ABOUT OBJECTS
+//1) String also have properties and values
+//2) in JS there is something known as AUTO-BOXING which wraps string 
+//into a special object that has properties which can be used on string
+//3)AUTO-BOXING DOESN'T WORK WITH NULL AND UNDEFINED
+//4)Objects are Refrences
+//5)we can create refrence to object
+//6)We can't direcectly compare any two objects
+const obj1={message:'hello'};
+const obj2=obj1; //it will work as second name to obj1
+obj2.message ='Good Job';
+const obj3={message:'Good Job'};
+console.log(obj1);
+console.log(obj2);
+console.log('hello'.length); //will print length of string
+console.log('hello'.toUpperCase()); //will print string in uppercase
+console.log((obj3===obj1));//it will compare the refrences not the actual value inside it
+console.log(obj1===obj2);//since both refrences have same memory address it will print true
+const obj4={message:'Well Done',
+             price:799  };
+//const message=obj4.message; both this and below line work same
+const {message,price}=obj4; //this is known as Destructring:-it is easier way to take property
+console.log(message,price);  //out of object
+
+const obj5={
+   // message:message //it will assign value of messge variable this is known as
+  message ,           //Shorthand Method
+ /*method:function func1(){
+    console.log('method');
+ }*/
+ method()
+ { console.log('method');}           
+        
+};     
+console.log(obj5);
+obj5.method();
+
+
+  </script>
+                            
+    </body>
+</html>
